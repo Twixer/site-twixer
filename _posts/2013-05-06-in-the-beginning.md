@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "In the beginning"
+title: "In the beginning ..."
 description: "first post, first success !"
 category: 
 tags: []
