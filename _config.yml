@@ -16,7 +16,8 @@ author :
   email : twixer@gmail.com
   github : twixer
   twitter : twixer
-#  feedburner : twixer@gmail.com
+#  feedburner : twixer/tScE
+  feedname : twixer/tScE
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
