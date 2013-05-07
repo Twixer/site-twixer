@@ -12,8 +12,8 @@ pygments: true
 title : My 2 cents
 tagline: Site Tagline
 author :
-  name : Twixer
-  email : twixer@gmail.com
+#  name : Twixer
+#  email : twixer@gmail.com
   github : twixer
   twitter : twixer
   feedburner : twixer/tScE
