@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>My 2 cents</title>
+ <link href="http://dev.twixer.fr/" rel="self"/>
+ <link href="http://dev.twixer.fr"/>
+ <updated>2013-05-07T13:13:39+02:00</updated>
+ <id>http://dev.twixer.fr</id>
+ <author>
+   <name>Twixer</name>
+   <email>twixer@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>In the beginning ...</title>
+   <link href="http://dev.twixer.fr/2013/05/06/in-the-beginning"/>
+   <updated>2013-05-06T00:00:00+02:00</updated>
+   <id>http://dev.twixer.fr/2013/05/06/in-the-beginning</id>
+   <content type="html">&lt;p&gt;Alors oui c&amp;#8217;est le début &amp;#8230;&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
