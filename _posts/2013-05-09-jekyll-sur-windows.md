@@ -23,7 +23,8 @@ Les versions de ruby et du devKit que j'ai utilisé sont à récupérer sur [Rub
 - [rubyinstaller-1.9.3-p392.exe] (http://rubyforge.org/frs/download.php/76798/rubyinstaller-1.9.3-p392.exe)
 - [DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
 
-J'ai tenté une installation avec les dernières versions de Ruby et du devKit mais j'ai ensuite eu des problèmes avec Jekyll et ses dépendances.
+##Les pièges à éviter
+J'ai tenté une installation avec les dernières versions de Ruby et du devKit, respectivement les versions 2.0.0 et 4.7.2, mais j'ai eu des problèmes avec les versions 64 bits. J'ai donc tenté d'installer une version 32 bits de ces versions mais c'est avec les dépendances de Jekyll que j'ai rencontré des problèmes. 
 
 #Git
 Le versionning est assuré au moyen de Git. Il faut donc installer [Git pour Windows](http://code.google.com/p/msysgit/).
