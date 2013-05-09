@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "In the beginning ..."
-description: "first post, first success !"
+title: "Au commencement ..."
+description: "premier post, premier succès !"
 category: nodev
 tags: [bullshit]
 ---
