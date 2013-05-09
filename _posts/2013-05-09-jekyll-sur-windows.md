@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll sur Windows"
 description: ""
 category: jekyll
-tags: [tuto, jekyll, ruby, git, cygwin]
+tags: [tuto, jekyll, ruby, git]
 ---
 {% include JB/setup %}
 
@@ -23,10 +23,15 @@ Les versions de ruby et du devKit que j'ai utilisé sont à récupérer sur [Rub
 - [rubyinstaller-1.9.3-p392.exe] (http://rubyforge.org/frs/download.php/76798/rubyinstaller-1.9.3-p392.exe)
 - [DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
 
-J'ai tenté une installation avec les dernières version de Rubis et du devKit mais j'ai ensuite eu des problèmes avec Jekyll et ses dépendances.
+J'ai tenté une installation avec les dernières versions de Ruby et du devKit mais j'ai ensuite eu des problèmes avec Jekyll et ses dépendances.
 
-#
+#Git
+Le versionning est assuré au moyen de Git. Il faut donc installer [Git pour Windows](http://code.google.com/p/msysgit/).
+Dans mon cas j'utilise la version [1.7.9](http://code.google.com/p/msysgit/downloads/detail?name=Git-1.7.9-preview20120201.exe&can=2&q=).
 
+#Jekyll
+Pour démarrer avec Jekyll, on peut partir de zéro comme le préconise [Carl Boettiger](http://carlboettiger.info/2012/12/30/learning-jekyll.html). L'apprentissage de zéro permet de n'utiliser que les fonctionnalités dont on a besoin et de maîtriser au fil de l'eau l'outil.
+Pour ma part, j'ai décidé de partir sur un template existant.
 
 #Sources
 [Installation de Jekyll sous Windows](http://forresst.github.io/2012/03/20/Installer-Jekyll-Sous-Windows)
