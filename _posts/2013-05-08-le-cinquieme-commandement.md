@@ -35,7 +35,7 @@ Démarrer avec Jekyll implique néanmoins de franchir un palier technique plus o
 2. Concepts Jekyll : arborescence, templating ...
 3. Langage Markdown pour les articles
 
-J'ai trouvé une bonne introduction aux concepts de Jekyll sur [Jekyll-Bootstrap](http://jekyllbootstrap.com/lessons/jekyll-introduction.html).
+J'ai trouvé une bonne introduction aux concepts de Jekyll sur [Jekyll-Bootstrap](http://jekyllbootstrap.com/lessons/jekyll-introduction.html). Un article en français qui liste ses avantages et ses inconvénients peut être trouvé sur [http://jeremyherve.com](http://jeremyherve.com/2011/08/28/passer-de-wordpress-jekyll-premiere-partie/).
 
 ## Cycle de vie
 Une fois établi le choix technique du moteur de blogging, il faut également penser au développement et déploiement de son site.
