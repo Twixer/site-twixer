@@ -20,7 +20,7 @@ Je ne voulais plus m'embarasser d'une base de données pour le stockage des post
 Le stockage dans une base obligeant à passer par une console d'administration pour mettre à jour les articles était une contrainte.
 
 ## Hébergement
-Je n'avait pas d'idée précise quant à l'hébergement final de mon blog.
+Je n'avais pas d'idée précise quant à l'hébergement final de mon blog.
 Je possède bien sûr un hébergeur mais je voulais rester souple et pouvoir en changer. Je ne voulais pas non plus être lié à une plateforme de blogging.
 L'hébergement d'un site statique, fournissant du simple HTML, est celui qui présente le moins de contraintes pour la migration.
 
