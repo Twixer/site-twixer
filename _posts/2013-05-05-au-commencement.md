@@ -3,7 +3,7 @@ layout: post
 title: "Au commencement ..."
 description: "Premier post, premier succès !"
 category: nodev
-tags: [bullshit nodev]
+tags: [bullshit, nodev]
 ---
 {% include JB/setup %}
 
