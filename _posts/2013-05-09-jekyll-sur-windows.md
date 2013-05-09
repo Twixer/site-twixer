@@ -34,5 +34,9 @@ Dans mon cas j'utilise la version [1.7.9](http://code.google.com/p/msysgit/downl
 Pour démarrer avec Jekyll, on peut partir de zéro comme le préconise [Carl Boettiger](http://carlboettiger.info/2012/12/30/learning-jekyll.html). L'apprentissage de zéro permet de n'utiliser que les fonctionnalités dont on a besoin et de maîtriser au fil de l'eau l'outil.
 Pour ma part, j'ai décidé de partir sur un template existant.
 
+##Quel template ?
+
+##Jekyll-Bootstrap
+
 #Sources
 [Installation de Jekyll sous Windows](http://forresst.github.io/2012/03/20/Installer-Jekyll-Sous-Windows)
