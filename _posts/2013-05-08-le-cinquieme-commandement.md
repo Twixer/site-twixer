@@ -29,10 +29,12 @@ Enfin, bien que le site soit statique, la possibilité d'inclure des éléments 
 
 #Jekyll
 Mon choix s'est porté sur [Jekyll](http://jekyllrb.com/).
-En plus de répondre aux contraintes fixées, Jekyll est le moteur qui propulse les sites hébergé par [Github](https://help.github.com/articles/using-jekyll-with-pages).
-Démarrer avec Jekyll implique néanmoins de franchir un palier technique plus ou moins important en fonction de son background :
-1. Concepts Ruby : installation, langage, système de gems, rakefile ...
-2. Concepts Jekyll : arborescence, templating ...
+Jekyll répond aux contraintes que je me suis fixé mais il a en plus d'autres attraits qui m'ont attiré.  
+En effet, Jekyll est le moteur qui propulse les sites hébergé par [Github](https://help.github.com/articles/using-jekyll-with-pages). J'ai un compte Github depuis longtemps mais je n'ai jamais eu l'occasion de l'utiliser. C'était donc là une bonne occasion de s'y mettre.  
+Chaque moteur de blogs statiques utilise un langage propre : PHP, Python, Ruby ... Jekyll utilise Ruby.  
+Démarrer avec Jekyll implique de franchir un palier technique plus ou moins important en fonction de son background :
+1. Notions Ruby : installation, langage, système de gems, rakefile ...
+2. Jekyll : arborescence, Liquid templating,  ...
 3. Langage Markdown pour les articles
 
 J'ai trouvé une bonne introduction aux concepts de Jekyll sur [Jekyll-Bootstrap](http://jekyllbootstrap.com/lessons/jekyll-introduction.html). Un article en français qui liste ses avantages et ses inconvénients peut être trouvé sur [http://jeremyherve.com](http://jeremyherve.com/2011/08/28/passer-de-wordpress-jekyll-premiere-partie/).
