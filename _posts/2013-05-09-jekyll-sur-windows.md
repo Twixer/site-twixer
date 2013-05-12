@@ -110,6 +110,7 @@ Pour ma part j'utilise GitHub pour héberger mon repository distant de sources. 
 	git commit -m "add the template Jekyll-Bootstrap"  
 	git push  
 {% endhighlight %}
+
 Vous pouvez maintenant ajouter des articles dans le répertoire DEST_PATH/_post.
 On peut utiliser une commande du rakefile de JB : 
 {% highlight console %}
@@ -118,7 +119,14 @@ rake post title="Hello World"
 Un fichier avec le pattern *AAAA-MM-JJ-Hello-World.md* sera créé dans le répertoire DEST_PATH/_post avec un en-tête YAML déjà initialisé.
 
 ---------------------------------------
-#Sources
+#Conclusion
+
+Après avoir installé Ruby et la gem Jekyll, Git et le projet Jekyll-Bootstrap, on est prêt à écrire les articles pour son site de blogging.
+La facilité de création d'un thème pour JB m'a conduit à créer un thème [twixer](https://github.com/Twixer/theme-jb-twixer) que je compte modifier au fur et à mesure.
+Le déploiement du site chez mon hébergeur sera abordé dans l'article [Jekyll chez 1and1]({% post_url 2013-05-12-jekyll-chez-1and1 %}).
+
+---------------------------------------
+#Ressources
 
 - Ruby  
 	site [RubyInstaller][] pour Windows  
