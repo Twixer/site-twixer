@@ -12,7 +12,7 @@ pygments: true
 title : My 2 cents
 tagline: Site Tagline
 author :
-#  name : Twixer
+  name : Twixer
 #  email : twixer@gmail.com
   github : twixer
   twitter : twixer
