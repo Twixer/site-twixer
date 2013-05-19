@@ -68,6 +68,14 @@ Voici mon dépôt de gems avec leur version (commande *gem list*) :
 J'ai tenté une installation avec les dernières versions de Ruby et du devKit, respectivement les versions 2.0.0 et 4.7.2, mais j'ai eu des problèmes avec les versions 64 bits.  
 J'ai également tenté d'installer une version 32 bits de ces versions mais c'est avec les dépendances de Jekyll que j'ai rencontré des problèmes. Jekyll n'est pas compatible avec la dernière version des gems Ruby 2, donc je suis resté sur les versions 1.9.3.
 
+A chaque ouverture d'une fenêtre de commande Windows, il faudra taper les commandes suivantes pour la prise en compte de l'encoding en UTF-8 : 
+
+{% highlight console %}
+	set LC_ALL=en_US.UTF-8
+	set LANG=en_US.UTF-8
+{% endhighlight %}
+Dans le cas contraire, des erreurs pourraient apparaître lors de la création du site avec la commande *jekyll*.
+
 ---------------------------------------
 #Git
 Le versionning est assuré au moyen de Git. Il faut donc installer [Git pour Windows][].
