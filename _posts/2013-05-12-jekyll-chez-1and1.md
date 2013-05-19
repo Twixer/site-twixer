@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll chez 1and1"
 description: "Intégration d'un site Jekyll chez 1and1"
-category: jekyll
+category: tuto
 tags: [tuto, jekyll, 1and1, git]
 ---
 {% include JB/setup %}

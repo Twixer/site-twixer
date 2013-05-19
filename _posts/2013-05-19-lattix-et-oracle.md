@@ -2,7 +2,7 @@
 layout: post
 title: "Lattix et Oracle"
 description: ""
-category: oracle
+category: tuto
 tags: [tuto, lattix, oracle, java, hibernate]
 ---
 {% include JB/setup %}

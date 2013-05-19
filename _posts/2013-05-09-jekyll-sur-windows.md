@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll sur Windows"
 description: ""
-category: jekyll
+category: tuto
 tags: [tuto, jekyll, ruby, git, windows]
 ---
 {% include JB/setup %}

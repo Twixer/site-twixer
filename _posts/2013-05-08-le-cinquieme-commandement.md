@@ -2,7 +2,7 @@
 layout: post
 title: "Le cinquième commandement"
 description: "Pourquoi Jekyll ?"
-category: jekyll 
+category: tech 
 tags: [jekyll]
 ---
 {% include JB/setup %}
