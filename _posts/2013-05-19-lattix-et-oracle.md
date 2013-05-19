@@ -3,7 +3,7 @@ layout: post
 title: "Lattix et Oracle"
 description: ""
 category: tuto
-tags: [tuto, lattix, oracle, java, hibernate]
+tags: [tuto, lattix, oracle, java, spring, hibernate]
 published: false
 ---
 {% include JB/setup %}
@@ -15,7 +15,12 @@ N'ayant aucune connaissance de [Lattix][] et des DSM, ma démarche a été de te
 
 ---------------------------------------
 #Contexte
-On m'a fourni le dump d'un projet pour une base de données Oracle 11g ainsi que les sources Java du projet qui accède à cette base au moyen du framework Hibernate.
+Pour démarrer j'avais en entrée un projet pour une base de données Oracle 11g ainsi que les sources Java du projet qui accède à cette base au moyen du framework Hibernate avec Spring pour la configuration. Les fichiers à disposition sont donc : 
+- script de création des tablespaces
+- script de création des users et des droits 
+- dump d'une base de développement
+- sources Java de la couche persistence avec Spring/Hibernate
+
 
 ---------------------------------------
 #Installation
@@ -29,3 +34,6 @@ La version de la base de données sera Oracle 11g Express Edition. Elle peut êt
 [Lattix]: http://www.lattix.com/
 
 [Oracle 11g Express Edition]: http://www.oracle.com/technetwork/products/express-edition/downloads/index.html
+
+[SQL Developer]:http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
+[SQL Developer Documentation]: http://docs.oracle.com/cd/E35137_01/index.htm
