@@ -3,7 +3,7 @@ layout: post
 title: "Trucs &amp; Astuces pour Maven sous Windows"
 description: ""
 category: hints and tips
-tags: [maven, windows, oracle, jdbc]
+tags: [tips, maven, windows, oracle, jdbc]
 ---
 {% include JB/setup %}
 
