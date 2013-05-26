@@ -15,6 +15,8 @@ Cet article est également un moyen pour moi de garder une liste des commandes q
 ---------------------------------------
 #Trucs & Astuces
 
+##comment supprimer un fichier ?
+git rm chemin/du/fichier
 
 ---------------------------------------
 #Ressources
