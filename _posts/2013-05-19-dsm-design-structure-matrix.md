@@ -71,7 +71,7 @@ On constate que le framework est plutôt bien architecturé avec en haut les él
 Voici un autre exemple avec la bibliothète *commons-collection* de la [fondation Apache][]. Cette fois on peut voir un DSM de la même bibliothèque mais le premier est généré avec Sonar et le second avec Dtangler  :  
 ![dsm_lattix_commons-collections_sonar][] 
 ![dsm_lattix_commons-collections_dtangler][]  
-On peut constater que les classes dans le package *org.apache.commons.collecions* (colonne 8), font appel à beaucoup d'autres package et sont appelés par tous les éléments de la bibliothèque. De même le package *list* est appelé par beaucoup d'autres.  
+On peut constater que les classes dans le package *org.apache.commons.collecions* (colonne 8), font appel à beaucoup d'autres packages et sont appelés par tous les éléments de la bibliothèque. De même le package *list* est appelé par beaucoup d'autres.  
 Sans avoir à concevoir le modèle de classe en UML on identifie donc très rapidement avec une DSM l'architecture d'une bibliothèque et les points faibles de celle-ci.
 
 
@@ -123,7 +123,7 @@ Ces règles sont visualiser graphiquement et les manquements sont mis en éviden
 ---------------------------------------
 #Conclusion
 L'analyse du produit Lattix m'a permis d'aborder et de comprendre l'approche DSM. J'avais déjà été confronté à cette représentation sans y prêter attention avec par exemple [Sonar][] dans le monde Java. L'analyse de l'architecture d'un projet sous Sonar sera maintenant d'autant plus simple et rapide.  
-Lattix se révèle être un produit assez puissant par rapport à un outil comme Sonar ou Dtangler. Les fonctionnalités de Lattix permettent réellement à un architecte de réaliser son travail en amont comme en aval de la réalisation d'un projet. En amont, il permet de définir des règles pour une architecture et de vérifier que ces règles sont maintenues. En aval, c'est un bon outil pour appréhender un nouveau système inconnu et identifier rapidement les choix de conception et les éventuels problèmes.
+Lattix se révèle être un produit assez puissant par rapport à un outil comme Sonar ou [Dtangler][]. Les fonctionnalités de Lattix permettent réellement à un architecte de réaliser son travail en amont comme en aval de la réalisation d'un projet. En amont, il permet de définir des règles pour une architecture et de vérifier que ces règles sont maintenues. En aval, c'est un bon outil pour appréhender un nouveau système inconnu et identifier rapidement les choix de conception et les éventuels problèmes.
 
 ---------------------------------------
 #Ressources
@@ -159,7 +159,7 @@ Lattix se révèle être un produit assez puissant par rapport à un outil comme
 
 
 [Sonar]: http://www.sonarsource.org/
-[dtangler]: http://web.sysart.fi/dtangler/
+[Dtangler]: http://web.sysart.fi/dtangler/
 
 <!-- Ressources images -->
 
