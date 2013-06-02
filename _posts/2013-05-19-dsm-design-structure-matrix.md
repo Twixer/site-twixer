@@ -9,9 +9,9 @@ published: true
 {% include JB/setup %}
 
 #Introduction
-Dans le cadre de mon travail, j'ai été amené à étudié l'outil [Lattix][]. Cet outil permet de créer des matrices de structures de dépendances (*Design|Dependency Structure Matrix* ou *DSM*) et de les manipuler. L'objectif d'une DSM est la modélisation de l'architecture d'un projet et la définition de règles pour le maintien de la cohérence de cette architecture.
+Dans le cadre de mon travail, j'ai été amené à étudier l'outil [Lattix][]. Cet outil permet de créer des matrices de structures de dépendances (*Design|Dependency Structure Matrix* ou *DSM*) et de les manipuler. L'objectif d'une DSM est la modélisation de l'architecture d'un projet et la définition de règles pour le maintien de la cohérence de cette architecture.
 L'analyse demandée portait sur la capacité de l'outil à modéliser un gros projet sous Oracle utilisant beaucoup de schémas et de procédures stockées.  
-Cet article va décrire mon retour d'expérience sur Lattix et les DSM.
+Cet article va décrire mon retour d'expérience sur les DSM et donner un petit aperçu de Lattix.
 
 ---------------------------------------
 #Démarche
@@ -19,7 +19,7 @@ J'avais deux axes à suivre pour mener à bien mon travail :
 1. monter en compétence sur la notion de DSM
 2. monter en compétence sur Lattix 
 
-Pour démarrer, j'avais sous la main un projet exemple utilsant une base de donnée Oracle 11g ainsi que la couche Java accédant à cette base au moyen du doublé gagnant Spring/Hibernate. Les fichiers à disposition étaient les suivants : 
+Pour démarrer, j'avais sous la main un projet exemple utilsant une base de donnée Oracle 11g ainsi que la couche Java accédant à cette base au moyen du doublé Spring/Hibernate. Les fichiers à disposition étaient les suivants : 
 - script de création des tablespaces
 - script de création des users et des droits 
 - dump d'une base de développement
@@ -34,10 +34,10 @@ L'idée était donc de me documenter sur les DSM et d'utiliser le projet pour ma
 Le sigle DSM est utilisé pour **D**esign ou **D**ependency **S**tructure **M**attrix. Pour traduire mot à mot l'anglais, je dirais que c'est une matrice de la structure de dépendences d'un système. La DSM est une représentation sous forme de tableau (matrice) des liens entre les composants d'un système. Le champ d'application des DSM n'est pas uniquement l'informatique bien que ce soit ce domaine qui nous intéresse ici (cf. [DSM-conference][]).
 
 ##La cible
-Dans le domaine de l'IT, l'approche DSM couvre les besoins de conception, de maintenance ou d'analyse d'une architecture. Si nous devons modéliser l'architecture d'un système, nous aurons comme premier réflexe l'utilsiation d'UML et du diagramme de classes pour des langages objets ou alors nous passerons par un MCD/MPD si nous avons affaire à une base de données. Cette conception nous conduit à des schémas comme : ![cas simple de modélisation][simple_class_diagramm]
+Dans le domaine de l'IT, l'approche DSM couvre les besoins de conception, de maintenance ou d'analyse d'une architecture. Si nous devons modéliser l'architecture d'un système, nous aurons comme premier réflexe l'utilisation d'UML et du diagramme de classes pour des langages objets ou alors nous passerons par un MCD/MPD si nous avons affaire à une base de données. Cette conception nous conduit à des schémas comme : ![cas simple de modélisation][simple_class_diagramm]
 ou comme : ![cas de modélisation compliquée][complicated_class_diagramm]  
 Il n'est pas tout de suite évident d'appréhender tous les liens et les dépendences entre les éléments. L'oeil humain est capable de noter la plus ou moins grande complexité du système mais identifier rapidement quel élément est en lien avec lequel ou lister rapidement tous les liens est bien plus compliqué.  
-C'est là qu'intervienne des représentations comme la DSM. Celle-ci est capable de synthétiser en un tableau les liens entre chaque élément d'un système et de percevoir la structure du système.
+C'est là qu'interviennent des représentations comme la DSM. Celle-ci est capable de synthétiser en un tableau les liens entre chaque élément d'un système et de percevoir la structure du système.
 
 ##Contenu d'une DSM
 Le schéma suivant représente un exemple de DSM : ![exemple de DSM][dsm_sample]  
@@ -47,20 +47,20 @@ Donc pour résumer :
 - colonne Y : une colonne représente tous les éléments qui sont appelés par Y
 - ligne X : une ligne représente tous les éléments qui font appel à X
 
-##Découpage en couches
-Un système bien conçu doit être découpé en couches. Les différentes couches doivent avoir une adhérence faible avec les couches proches et pas de lien avec les couches éloignées. Par exemple, on pourrait avoir une application avec les couches suivantes : 
-1. IHM
-2. services
-3. stockage de données  
-Dans ce découpage, il est déconseillé de créer un lien entre la couche IHM et la couche stockage de données.  
-Ce découpage en couche et le découplage entre chacune permet de limiter les impacts en cas de modification de design au sein d'une couche. On peut par exemple modifier la façon dont on stocke/accède aux données sans pour autant impacter la partie IHM.     
+##Système modulaire
+Un système bien conçu doit être découpé en modules (ou composants ou couches suivant la littérature). Les différents modules doivent avoir une adhérence faible avec les autres modules. Par exemple, on pourrait avoir une application avec les modules suivants : 
+1. module IHM
+2. module services
+3. module stockage de données  
+Dans ce découpage, il est déconseillé de créer un lien entre le module IHM et le module stockage de données.  
+Ce découpage en modules et le découplage entre chacune permet de limiter les impacts en cas de modification de design au sein d'un module. On peut par exemple modifier la façon dont on stocke/accède aux données sans pour autant impacter la partie IHM.     
 Une fois ces concepts posés, c'est là que l'approche par la DSM est intéressante. 
 
 ##Analyse d'un système, la théorie
-L'approche DSM permet d'identifier rapidement les éléments de haut et bas niveau et d'identifier les couches du système étudié. Dans la matrice, les premiers éléments font partie des couches de haut niveau qui ne sont pas accédés par les autres éléments. Les derniers éléments de la liste représentent le coeur de l'application, les classes utilitaires accédées par la plupart des autres couches. Seul le triangle inférieur doit posséder des chiffres, dans le cas contraire cela signigie qu'il y a un problème de conception et qu'un refactoring est nécessaire (dépendance cyclique possible). 
-Exemple d'un système découpé en couches fortement couplées :  
+L'approche DSM permet d'identifier rapidement les éléments de haut et bas niveau et d'identifier les modules du système étudié. Dans la matrice, les premiers éléments font partie des modules de haut niveau qui ne sont pas accédés par les autres éléments. Les derniers éléments de la liste représentent le coeur de l'application, les classes utilitaires accédées par la plupart des autres modules. On pourrait catégoriser ce module comme le framework coeur de l'application. Seul le triangle inférieur doit posséder des chiffres, dans le cas contraire cela signigie qu'il y a un problème de conception et qu'un refactoring est nécessaire (dépendance cyclique possible). 
+Exemple d'un système découpé en modules fortement couplées :  
 ![dsm_lattix_01][]
-Voici un autre exemple de système où les couches sont bien découpées et où une couche n'accède qu'à la couche inférieure :  
+Voici un autre exemple de système où les modules sont bien découpées et où un module n'accède qu'au module inférieure :  
 ![dsm_lattix_02][]  
 Dans la réalité, même si ce dernier découpage semble idéal, il est bien difficile de l'atteindre.
 
@@ -68,10 +68,10 @@ Dans la réalité, même si ce dernier découpage semble idéal, il est bien dif
 Voici un exemple de DSM pour la bibliothèque [springframework][] :
 ![dsm_lattix_springframework_dtangler][]  
 On constate que le framework est plutôt bien architecturé avec en haut les éléments de haut niveau, en dans en bas le coeur de la bibliothèque avec les packages *core* et *util*. Il n'y a pratiquement pas d'entier dans le triangle supérieur.  
-Voici un autre exemple avec la bibliothète *commons-collection* de la [fondation Apache][]. Cette fois on peut voir un DSM de la même bibliothèque mais le premier est généré avec Sonar et le second avec Dtangler  :  
+Voici un autre exemple avec la bibliothète *commons-collection* de la [fondation Apache][]. Cette fois on peut voir un DSM de la même bibliothèque mais le premier est généré avec Sonar et le second avec [Dtangler][]  :  
 ![dsm_lattix_commons-collections_sonar][] 
 ![dsm_lattix_commons-collections_dtangler][]  
-On peut constater que les classes dans le package *org.apache.commons.collecions* (colonne 8), font appel à beaucoup d'autres packages et sont appelés par tous les éléments de la bibliothèque. De même le package *list* est appelé par beaucoup d'autres.  
+On peut constater que les classes dans le package *org.apache.commons.collecions* (colonne 8), font appel à beaucoup d'autres packages et sont appelées par tous les éléments de la bibliothèque. De même le package *list* est appelé par beaucoup d'autres.  
 Sans avoir à concevoir le modèle de classe en UML on identifie donc très rapidement avec une DSM l'architecture d'une bibliothèque et les points faibles de celle-ci.
 
 
