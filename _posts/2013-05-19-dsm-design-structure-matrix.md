@@ -64,7 +64,7 @@ Voici un autre exemple de système où les modules sont bien découpées et où 
 ![dsm_lattix_02][]  
 Dans la réalité, même si ce dernier découpage semble idéal, il est bien difficile de l'atteindre.
 
-#Analyse d'un système, la pratique
+##Analyse d'un système, la pratique
 Voici un exemple de DSM pour la bibliothèque [springframework][] :
 ![dsm_lattix_springframework_dtangler][]  
 On constate que le framework est plutôt bien architecturé avec en haut les éléments de haut niveau, en dans en bas le coeur de la bibliothèque avec les packages *core* et *util*. Il n'y a pratiquement pas d'entier dans le triangle supérieur.  
