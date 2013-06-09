@@ -117,7 +117,7 @@ Modifier le paramètre LogFormat :
 LogFormat=%host %other %logname %time1 %methodurl %code %bytesd %virtualname %refererquot %uaquot %otherquot
 {% endhighlight %}
 
-##SiteDomaine
+##SiteDomain
 Mofidier le paramètre SiteDomain avec votre nom de domaine ou de sous-domaine : 
 {% highlight apache %}
 SiteDomain="monDomaine.fr"
