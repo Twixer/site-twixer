@@ -157,6 +157,16 @@ chmod 404 ~/www/awstats/.htaccess
 ##Connection
 La connexion à l'IHM d'Awstats se fait ensuite par l'URL : http://awstats.monDomaine.fr/cgi-bin/awstats.pl&config=monDomaine.fr.  
 
+---------------------------------------
+#Divers
+##Rattrapage de journées
+Il arrive qu'on ait besoin de rattraper une journée. Pour ce faire la solution simple est d'utiliser le script utilitaire *logresolvemerge.pl* d'Awstats qu'on trouve dans le répertoire **tools** de la distribution.
+Les commandes sont : 
+{% highlight bash %}
+perl awstats/tools/logresolvemerge.pl ~/logs/access.log.*.gz > temp.log  
+perl awstats/cgi-bin/awstats.pl -config=monDomaine.fr -LogFile=./temp.log -update  
+rm temp.log  
+{% endhighlight %}
 
 ---------------------------------------
 #Conclusion
