@@ -67,7 +67,7 @@ Dans la réalité, même si ce dernier découpage semble idéal, il est bien dif
 ##Analyse d'un système, la pratique
 Voici un exemple de DSM pour la bibliothèque [springframework][] :
 ![dsm_lattix_springframework_dtangler][]  
-On constate que le framework est plutôt bien architecturé avec en haut les éléments de haut niveau, en dans en bas le coeur de la bibliothèque avec les packages *core* et *util*. Il n'y a pratiquement pas d'entier dans le triangle supérieur.  
+On constate que le framework est plutôt bien architecturé avec en haut les éléments de haut niveau, en bas le coeur de la bibliothèque avec les packages *core* et *util*. Il n'y a pratiquement pas d'entier dans le triangle supérieur.  
 Voici un autre exemple avec la bibliothète *commons-collection* de la [fondation Apache][]. Cette fois on peut voir un DSM de la même bibliothèque mais le premier est généré avec Sonar et le second avec [Dtangler][]  :  
 ![dsm_lattix_commons-collections_sonar][] 
 ![dsm_lattix_commons-collections_dtangler][]  
